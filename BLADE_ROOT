@@ -1,0 +1,19 @@
+cc_config(
+    extra_incs = ["-g", "-pipe", "-rdynamic", "-std=c++11"],
+    warnings = [
+        "-W",
+        "-Wall",
+        "-Werror",
+        "-Wno-reorder",
+        "-Wno-extra",
+        "-Wno-unused-function",
+        "-Wno-parentheses",
+        "-Wno-unused-parameter"
+    ],
+    optimize = '-O2',
+)
+
+proto_library_config(
+    protoc = 'protoc',
+    protobuf_libs = '//thirdparty/protobuf:protobuf',
+)
