@@ -1,5 +1,4 @@
 cc_config(
-    extra_incs = ["-g", "-pipe", "-rdynamic", "-std=c++11"],
     warnings = [
         "-W",
         "-Wall",
