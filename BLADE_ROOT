@@ -1,3 +1,4 @@
+
 cc_config(
     warnings = [
         "-W",
@@ -13,7 +14,17 @@ cc_config(
     optimize = '-O2',
 )
 
+cc_library_config(
+    generate_dynamic = True,
+)
+
 proto_library_config(
-    protoc = 'protoc',
+    protoc = 'bin/protoc',
     protobuf_libs = '//thirdparty/protobuf:protobuf',
 )
+
+thrift_library_config(
+    thrift='bin/thrift',
+    thrift_libs='//thirdparty/thrift:thrift',
+)
+

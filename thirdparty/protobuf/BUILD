@@ -50,7 +50,6 @@ cc_library(
 cc_library(
     name = "protobuf",
     srcs = [
-        # AUTOGEN(protobuf_srcs)
         "src/google/protobuf/any.cc",
         "src/google/protobuf/any.pb.cc",
         "src/google/protobuf/api.pb.cc",
@@ -120,7 +119,6 @@ cc_library(
 cc_library(
     name = "protoc_lib",
     srcs = [
-        # AUTOGEN(protoc_lib_srcs)
         "src/google/protobuf/compiler/code_generator.cc",
         "src/google/protobuf/compiler/command_line_interface.cc",
         "src/google/protobuf/compiler/cpp/cpp_enum.cc",
@@ -229,5 +227,4 @@ cc_binary(
     incs = ["src"],
     defs = def_list,
     warning = warning_list,
-    dynamic_link = True
 )
