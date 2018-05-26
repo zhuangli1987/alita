@@ -9,6 +9,7 @@ cc_config(
         "-Wno-parentheses",
         "-Wno-unused-parameter"
     ],
+    extra_incs=['include'],
     optimize = '-O2',
 )
 
