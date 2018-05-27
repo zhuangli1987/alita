@@ -23,12 +23,20 @@ function build_thrift() {
     cd -
 }
 
+function build_gflags() {
+    blade build thirdparty/gflags
+    cd thirdparty/gflags/include
+    cp --parents -r gflags $base_dir/include
+    cd -
+}
+
 function prepare() {
     rm -fr $base_dir/include
     rm -fr $base_dir/bin
     mkdir $base_dir/include
     mkdir $base_dir/bin
     build_protobuf
+    build_gflags
     build_thrift
 }
 
