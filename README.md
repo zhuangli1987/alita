@@ -2,7 +2,8 @@
 
 1. Please use Blade as its building system (https://github.com/chen3feng/typhoon-blade).
 2. Please make sure every lib is under the folder of thirdparty.
-3. Enjoy.
+3. Please use docker pull zhuangli1987/alita to get latest docker mirror.
+4. Enjoy.
 
 -----------
 Third Party
