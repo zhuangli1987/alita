@@ -4,13 +4,9 @@ cc_config(
         "-W",
         "-Wall",
         "-Werror",
-        "-Wno-reorder",
-        "-Wno-extra",
-        "-Wno-unused-function",
-        "-Wno-parentheses",
-        "-Wno-unused-parameter"
     ],
-    extra_incs=['include'],
+    extra_incs = ['include'],
+    cppflags = '-std=c++11',
     optimize = '-O2',
 )
 

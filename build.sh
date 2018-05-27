@@ -19,7 +19,6 @@ function build_thrift() {
     cd thirdparty/thrift/lib/src
     cp --parents thrift/*.h $base_dir/include
     cp --parents thrift/**/*.h $base_dir/include
-    cp --parents thrift/*.tcc $base_dir/include
     cp --parents thrift/**/*.tcc $base_dir/include
     cd -
 }
