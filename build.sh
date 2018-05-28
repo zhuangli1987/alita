@@ -38,9 +38,7 @@ function build_glog() {
 }
 
 function install_blade() {
-    rm -fr $base_dir/blade
-    git clone https://github.com/chen3feng/typhoon-blade.git blade
-    cd blade
+    cd thirdparty/blade
     bash install
     source ~/.profile
     cd -
