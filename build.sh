@@ -37,6 +37,20 @@ function build_glog() {
     cd -
 }
 
+function build_gtest() {
+    blade build thirdparty/gtest
+    cd thirdparty/gtest/include
+    cp --parents -r gtest $base_dir/include
+    cd -
+}
+
+function build_gmock() {
+    blade build thirdparty/gmock
+    cd thirdparty/gmock/include
+    cp --parents -r gmock $base_dir/include
+    cd -
+}
+
 function install_blade() {
     cd thirdparty/blade
     bash install
@@ -57,6 +71,10 @@ function prepare() {
     build_protobuf
     build_gflags
     build_glog
+    build_gtest
+    build_gmock
+
+    echo 'Prepared Succused!'
 }
 
 function main() {
