@@ -74,7 +74,7 @@ function prepare() {
     build_gtest
     build_gmock
 
-    echo 'Prepared Succused!'
+    echo 'Prepared Succeed!'
 }
 
 function main() {
