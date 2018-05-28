@@ -30,14 +30,35 @@ function build_gflags() {
     cd -
 }
 
+function build_glog() {
+    blade build thirdparty/glog
+    cd thirdparty/glog/src
+    cp --parents -r glog $base_dir/include
+    cd -
+}
+
+function install_blade() {
+    rm -fr $base_dir/blade
+    git clone https://github.com/chen3feng/typhoon-blade.git blade
+    cd blade
+    bash install
+    source ~/.profile
+    cd -
+}
+
 function prepare() {
+
+    install_blade
+
     rm -fr $base_dir/include
     rm -fr $base_dir/bin
     mkdir $base_dir/include
     mkdir $base_dir/bin
+
+    build_thrift
     build_protobuf
     build_gflags
-    build_thrift
+    build_glog
 }
 
 function main() {

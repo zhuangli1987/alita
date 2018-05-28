@@ -7,7 +7,11 @@ cc_library(
     ],
     warning = 'No',
     incs = ['include'],
-    defs = ['GFLAGS_IS_A_DLL=0', 'NO_THREADS', 'NDEBUG'],
+    defs = [
+        'GFLAGS_IS_A_DLL=0',
+        'NO_THREADS',
+        'NDEBUG',
+    ],
     optimize = '-O3',
 )
 
@@ -20,7 +24,10 @@ cc_library(
     ],
     warning = 'No',
     incs = ['include'],
-    defs = ['GFLAGS_IS_A_DLL=0', 'NDEBUG'],
+    defs = [
+        'GFLAGS_IS_A_DLL=0',
+        'NDEBUG',
+    ],
     deps = ['#pthread'],
     optimize = '-O3',
 )

@@ -1,0 +1,33 @@
+cc_library(
+    name = "glog",
+    srcs = [
+        'src/demangle.cc',
+        'src/logging.cc',
+        'src/raw_logging.cc',
+        'src/symbolize.cc',
+        'src/utilities.cc',
+        'src/vlog_is_on.cc',
+        'src/signalhandler.cc',
+    ],
+    warning = 'No',
+    incs = ['src'],
+    defs = [
+        'NO_FRAME_POINTER',
+        'NDEBUG',
+        'HAVE_LIB_GFLAGS',
+        'HAVE_PTHREAD',
+        'HAVE_SYS_UTSNAME_H',
+        'HAVE_SYS_SYSCALL_H',
+        'HAVE_SYS_TIME_H',
+        'HAVE_STDINT_H',
+        'HAVE_STRING_H',
+        'HAVE_PREAD',
+        'HAVE_FCNTL',
+        'HAVE_SYS_TYPES_H',
+        'HAVE_SYSLOG_H',
+        'HAVE_UNISTD_H',
+    ],
+    deps = ['#pthread', '//thirdparty/gflags:gflags'],
+    optimize = '-O2',
+)
+
