@@ -2,6 +2,7 @@ set -e
 
 function setup() {
     base_dir=$(cd "$(dirname "$0")";pwd)
+    sudo apt-get install -y bison flex libevent-dev
 }
 
 function build_protobuf() {
